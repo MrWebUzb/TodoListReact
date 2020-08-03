@@ -78,6 +78,7 @@ class App extends React.Component {
     return (
       <div className="App" >
         <header>
+          <h1>Todo List App</h1>
           <form id="todoForm" onSubmit={(e) => this.addItem(e)}>
             <input
               onChange={(e) => this.handleInput(e)}

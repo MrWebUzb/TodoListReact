@@ -3,8 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FlipMove from 'react-flip-move';
 import './ListItem.css'
 
+import ScrollArea from 'react-scrollbar';
+
 const ListItem = (props) => {
     const items = props.items;
+
+    items.sort((a, b) => {
+        return a.key < b.key;
+    });
 
     const listItems = items.map(item => {
         return (
@@ -28,11 +34,14 @@ const ListItem = (props) => {
     });
 
     return (
-        <div>
+        <ScrollArea
+            speed={0.8}
+            horizontal={false}
+            className="list">
             <FlipMove duration={300} easing="ease-in-out">
                 {listItems}
             </FlipMove>
-        </div>
+        </ScrollArea>
     )
 }
 

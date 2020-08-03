@@ -1,3 +1,7 @@
+.list {
+    width: 400px;
+    height: 70vh;
+}
 .list-item {
     color: #fff;
     width: 300px;

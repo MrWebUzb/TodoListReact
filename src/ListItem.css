@@ -1,0 +1,36 @@
+.list-item {
+    color: #fff;
+    width: 300px;
+    background-color: #bf07ac;
+    height: 50px;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+.list-item p {
+    padding: 10px;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.list-item p span {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.list-item p input {
+    background-color: transparent;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+}
+
+.list-item p input:focus {
+    outline: none;
+}
+
+.faicons {
+    margin: 0 5px;
+    font-size: 15px;
+}

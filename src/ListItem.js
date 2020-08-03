@@ -38,7 +38,7 @@ const ListItem = (props) => {
             speed={0.8}
             horizontal={false}
             className="list">
-            <FlipMove duration={300} easing="ease-in-out">
+            <FlipMove duration={300} easing="ease-in-out" style={{ height: '100%' }}>
                 {listItems}
             </FlipMove>
         </ScrollArea>

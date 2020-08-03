@@ -1,6 +1,7 @@
 .list {
     width: 100%;
-    height: 70vh;
+    height: 100%;
+    background-color: #4527A0;
 }
 .list-item {
     color: #fff;

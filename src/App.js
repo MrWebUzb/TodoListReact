@@ -47,20 +47,29 @@ class App extends React.Component {
 
   // Update value of item
   updateItem(key, value) {
-    const newItems = this.state.items.map((item) => {
-      if (item.key === key) {
-        return {
-          key: key,
-          text: value
+    if (value.length < 1) {
+      const filteredItems = this.state.items.filter(
+        item => item.key !== key
+      );
+      this.setState({
+        items: filteredItems
+      })
+    } else {
+      const newItems = this.state.items.map((item) => {
+        if (item.key === key) {
+          return {
+            key: key,
+            text: value
+          }
         }
-      }
 
-      return item
-    });
+        return item
+      });
 
-    this.setState({
-      items: newItems
-    })
+      this.setState({
+        items: newItems
+      })
+    }
   }
 
   // Handle input
@@ -77,7 +86,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App" >
-        <header>
+        <header className="app__header">
           <h1>Todo List App</h1>
           <form id="todoForm" onSubmit={(e) => this.addItem(e)}>
             <input
